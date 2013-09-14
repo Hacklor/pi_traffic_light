@@ -46,6 +46,8 @@ begin
     traffic_light.yellow
     sleep 3
   end
+rescue
+  puts "Rescued!"
 ensure
   traffic_light.off
 end
