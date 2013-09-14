@@ -1,4 +1,4 @@
-pi_traffic_light
-================
+# Traffic Light #
+A basic traffic light animation with three LEDs on the Raspberry Pi. Each LED has it's own GPIO output pin.
 
-Basic Traffic Light Animation
+The program can be stopped by pressing CTRL+C
