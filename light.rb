@@ -33,21 +33,21 @@ class TrafficLight
   end
 end
 
+puts "Initializing traffic light"
+traffic_light = TrafficLight.new
+continue = true
 
-begin
-  puts "Initializing traffic light"
-  traffic_light = TrafficLight.new
-
-  while true do
+while continue do
+  begin
     traffic_light.red
     sleep 3
     traffic_light.green
     sleep 3
     traffic_light.yellow
     sleep 3
+  rescue Exception => e
+    continue = false
+  ensure
+    traffic_light.off
   end
-rescue
-  puts "Rescued!"
-ensure
-  traffic_light.off
 end
